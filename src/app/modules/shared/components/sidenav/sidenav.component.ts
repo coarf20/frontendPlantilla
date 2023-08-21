@@ -11,7 +11,8 @@ export class SidenavComponent implements OnInit{
 
   menuNav = [
     {name: "Home", route: "home", icon: "home"},
-    {name: "Plantillas", route: "plantillas", icon: "medical_services"}
+    {name: "Plantillas", route: "plantillas", icon: "medical_services"},
+    {name: "NewPlantillas", route: "plantillas/new-plantilla", icon: "medical_services"}
   ]
 
   constructor(media: MediaMatcher) {

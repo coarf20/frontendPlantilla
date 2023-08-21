@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import {DashboardComponent} from "./pages/dashboard.component";
 import {RouterModule, Routes} from "@angular/router";
 
-
 const routes: Routes = [
   {
     path: 'dashboard',

@@ -1,5 +1,16 @@
 <mat-card>
   <h2 class="alinear">Listado de Plantillas</h2>
+  <div mat-card-image class="container-card-header">
+    <mat-card-header>
+      <div fxFlex fxFlexLayout="row" fxLayoutAlign="flex-end">
+        <ul fxLayout="row" fxLayoutGap="20px">
+          <li>
+            <button mat-raised-button color="primary" (click)="crearNuevaPlantilla()">Nueva Plantilla</button>
+          </li>
+        </ul>
+      </div>
+    </mat-card-header>
+  </div>
 
   <mat-card-content>
     <table mat-table [dataSource]="dataSource" class="mat-cell">

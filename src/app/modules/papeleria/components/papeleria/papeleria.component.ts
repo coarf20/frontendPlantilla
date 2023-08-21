@@ -4,6 +4,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {MatSnackBar, MatSnackBarRef, SimpleSnackBar} from "@angular/material/snack-bar";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-papeleria',
@@ -11,7 +12,7 @@ import {MatPaginator} from "@angular/material/paginator";
   styleUrls: ['./papeleria.component.css']
 })
 export class PapeleriaComponent implements OnInit{
-  constructor(private papeleriaService: PapeleriaService, public dialog: MatDialog, private snackBar: MatSnackBar) {
+  constructor(private papeleriaService: PapeleriaService, public dialog: MatDialog, private snackBar: MatSnackBar, private router: Router) {
   }
   ngOnInit(): void {
     this.getPlantillas();
@@ -49,6 +50,9 @@ export class PapeleriaComponent implements OnInit{
 
   }
 
+  crearNuevaPlantilla() {
+    this.router.navigate(['new-plantilla']);
+  }
 }
 
 export interface PapeleriaElement{
@@ -56,6 +60,4 @@ export interface PapeleriaElement{
   nombre: string,
   contenido: string,
   fechaCreacion: string
-
-
 }

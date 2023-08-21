@@ -1,1 +1,18 @@
-<p>new-plantilla works!</p>
+<form [formGroup]="formulario">
+  <div *ngIf="mostrarCampo1">
+    <label for="campo1">Campo 1:</label>
+    <input type="text" id="campo1" formControlName="campo1">
+  </div>
+
+  <div *ngIf="mostrarCampo2">
+    <label for="campo2">Campo 2:</label>
+    <input type="text" id="campo2" formControlName="campo2">
+  </div>
+
+  <!-- Agrega más campos con ngIf según sea necesario -->
+</form>
+<button (click)="alternarCamposVisibles()">Alternar Campos</button>
+
+<app-acomodar-campos-checkbox-derecha></app-acomodar-campos-checkbox-derecha>
+
+

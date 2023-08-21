@@ -1,0 +1,35 @@
+.container{
+  margin-top: 20px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-checkbox {
+  display: flex;
+}
+
+.ng-star-inserted{
+  display: inline-block;
+}
+
+.campo-derecha {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-left: auto;
+}
+
+.campo-seleccionado[hidden] {
+  display: none !important;
+}
+
+
+/* Estilos para los checkboxes */
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+

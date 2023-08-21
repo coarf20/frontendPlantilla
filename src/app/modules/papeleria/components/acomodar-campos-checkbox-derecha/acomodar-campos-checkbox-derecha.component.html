@@ -1,0 +1,18 @@
+<div class="container">
+  <form [formGroup]="formulario">
+    <div class="form-container">
+    <div class="campo-checkbox" *ngFor="let campo of campos">
+      <label>
+        <input class="input-checkbox" type="checkbox" [formControlName]="campo.id"> {{ campo.label }}
+      </label>
+    </div>
+    <div class="campo-derecha">
+      <div *ngFor="let campo of campos" class="campo-seleccionado" [hidden]="!formulario.get(campo.id)?.value" cdkDrag>
+        <label for="{{ campo.id }}">{{ campo.label }}:</label>
+        <input type="text" [id]="campo.id" [formControlName]="campo.id" cdkDrag>
+      </div>
+    </div>
+    </div>
+  </form>
+</div>
+
